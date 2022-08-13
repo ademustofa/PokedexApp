@@ -276,15 +276,7 @@ const HomeScreen = ({navigation, route}: any) => {
                         py={2}
                         justifyContent="flex-start"
                         space={3}>
-                        <Text
-                          style={{
-                            // paddingTop: '5%',
-                            // fontWeight: 'bold',
-                            color: '#000',
-                            // textTransform: 'uppercase',
-                          }}>
-                          {'>'}
-                        </Text>
+                       
                         <Text
                           style={{
                             // paddingTop: '5%',
@@ -293,6 +285,37 @@ const HomeScreen = ({navigation, route}: any) => {
                             textTransform: 'uppercase',
                           }}>
                           {res.ability.name}
+                        </Text>
+                      </HStack>
+                      <Divider />
+                    </Box>
+                  ))}
+              </VStack>
+            </Box>
+          </Box>
+          <Box p={2}>
+            <Box shadow={2} px="2" borderRadius={7} bg="#fff">
+              <Heading fontSize="sm" p="4" pb="3">
+                MOVE
+              </Heading>
+              <VStack px={5} pb={2} space={1}>
+                {dataPokemon &&
+                  dataPokemon.moves.map((res: any) => (
+                    <Box>
+                      <HStack
+                        px={1}
+                        py={2}
+                        justifyContent="flex-start"
+                        space={3}>
+                       
+                        <Text
+                          style={{
+                            // paddingTop: '5%',
+                            // fontWeight: 'bold',
+                            color: '#000',
+                            textTransform: 'uppercase',
+                          }}>
+                          {res.move.name}
                         </Text>
                       </HStack>
                       <Divider />

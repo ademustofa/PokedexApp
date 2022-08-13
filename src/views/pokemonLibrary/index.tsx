@@ -25,7 +25,7 @@ const itemHorizontalMargin = wp(2);
 export const sliderWidth = viewportWidth;
 export const itemWidth = slideWidth + itemHorizontalMargin * 2;
 
-const dataPerPage = 10;
+const dataPerPage = 15;
 
 const HomeScreen = ({navigation}: any) => {
   const [dataPokemon, setDataPokemon] = useState<any[]>([]);
