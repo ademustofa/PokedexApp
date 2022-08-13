@@ -1,49 +1,18 @@
-import React, {useState, useEffect} from 'react';
 import {
-  View,
-  StyleSheet,
-  Dimensions,
-  Image,
-  TouchableOpacity,
-  ActivityIndicator,
-  ToastAndroid,
-  Animated,
-} from 'react-native';
-import {
-  Input,
-  VStack,
-  Icon,
-  HStack,
-  Badge,
-  Button,
-  Heading,
-  Center,
-  Spacer,
-  Box,
-  FlatList,
-  Avatar,
-  Text,
-  useToast,
-  Alert,
-  Flex,
-  Divider,
-  Pressable,
-  Skeleton,
+  Alert, Avatar, Box, Button, Center, Divider, Flex, Heading, HStack, Icon, Pressable,
+  Skeleton, Text,
+  useToast, VStack
 } from 'native-base';
-import Carousel from 'react-native-snap-carousel';
+import React, { useState } from 'react';
+import {
+  StyleSheet, ToastAndroid
+} from 'react-native';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
-import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import axios from 'axios';
-import {useDispatch} from 'react-redux';
-import {setPokemonData} from '~redux/reducer/pokemonRtk';
+import { useDispatch } from 'react-redux';
+import { setPokemonData } from '~redux/reducer/pokemonRtk';
 
-import {useGetAllMemberTypeQuery} from '~redux/query/memberType';
-import BgImages from '~assets/images/bg.png';
-import {background} from 'native-base/lib/typescript/theme/styled-system';
-import {RESULTS} from 'react-native-permissions';
 
 const HomeScreen = ({navigation}: any) => {
   const toast = useToast();
@@ -329,11 +298,3 @@ const HomeScreen = ({navigation}: any) => {
 };
 
 export default HomeScreen;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    // padding: 10,
-    backgroundColor: '#fff',
-  },
-});

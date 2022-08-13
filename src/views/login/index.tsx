@@ -1,28 +1,14 @@
-import React, {useState} from 'react';
-import {Dimensions, KeyboardAvoidingView} from 'react-native';
-import {
-  Center,
-  VStack,
-  Input,
-  Icon,
-  Button,
-  IconButton,
-  Image,
-  Heading,
-  useToast,
-  Alert,
-  HStack,
-  Text,
-  Box,
-  ScrollView,
-} from 'native-base';
-import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import {
+  Alert, Button, Center, Heading, HStack, Icon, IconButton,
+  Image, Input, ScrollView, Text, useToast, VStack
+} from 'native-base';
+import React, { useState } from 'react';
+import { Dimensions, KeyboardAvoidingView } from 'react-native';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import { useDispatch } from 'react-redux';
 import LOGO from '~assets/images/pokemon.png';
-import {URL_LOGIN} from '~const/index';
-import axios from 'axios';
-import {useDispatch} from 'react-redux';
-import {setLogin} from '~redux/reducer/authRtk';
+import { setLogin } from '~redux/reducer/authRtk';
 import dataLogin from '~redux/reducer/login.json';
 import dataUser from '~redux/reducer/user.json';
 

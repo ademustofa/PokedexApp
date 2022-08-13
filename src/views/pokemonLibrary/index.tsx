@@ -1,40 +1,15 @@
-import React, {useState, useEffect} from 'react';
 import {
-  View,
-  StyleSheet,
-  Dimensions,
-  Image,
-  TouchableOpacity,
-  ActivityIndicator,
-} from 'react-native';
-import {
-  Input,
-  VStack,
-  Icon,
-  HStack,
-  Badge,
-  Button,
-  Heading,
-  Center,
-  Spacer,
-  Box,
-  FlatList,
-  Avatar,
-  Text,
-  Pressable,
+  Avatar, Box,
+  FlatList, Heading, HStack, Pressable, Spacer, Text, VStack
 } from 'native-base';
-import Carousel from 'react-native-snap-carousel';
+import React, { useEffect, useState } from 'react';
+import {
+  ActivityIndicator, Dimensions, StyleSheet, View
+} from 'react-native';
 
-import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
-import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import axios from 'axios';
 
-import {useGetAllMemberTypeQuery} from '~redux/query/memberType';
-import BgImages from '~assets/images/bg.png';
-import {background} from 'native-base/lib/typescript/theme/styled-system';
-import {RESULTS} from 'react-native-permissions';
 
 const {width: viewportWidth, height: viewportHeight} = Dimensions.get('window');
 

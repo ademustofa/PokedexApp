@@ -1,36 +1,18 @@
-import React, {useState, useEffect} from 'react';
 import {
-  View,
-  StyleSheet,
-  Dimensions,
-  Image,
-  TouchableOpacity,
-} from 'react-native';
-import {
-  Input,
-  VStack,
-  Icon,
-  HStack,
-  Badge,
-  Button,
-  Heading,
-  Center,
-  Spacer,
-  Box,
-  FlatList,
-  Avatar,
-  Text,
-  IconButton,
-  Divider,
-  ScrollView,
-  Flex,
   Alert,
+  Avatar,
+  Box,
+  Center,
+  Divider,
+  Flex,
+  Heading,
+  HStack,
+  ScrollView,
+  Text,
+  VStack,
 } from 'native-base';
-import Carousel from 'react-native-snap-carousel';
-import {useSelector} from 'react-redux';
-import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
-import AntDesign from 'react-native-vector-icons/AntDesign';
+import React, {useEffect, useState} from 'react';
+import {Dimensions, StyleSheet} from 'react-native';
 
 import axios from 'axios';
 
@@ -326,40 +308,3 @@ const HomeScreen = ({navigation, route}: any) => {
 };
 
 export default HomeScreen;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    // padding: 10,
-    backgroundColor: '#fff',
-  },
-  buttonScan: {
-    width: '100%',
-    paddingVertical: '15%',
-    backgroundColor: '#3D4094',
-    borderRadius: 4,
-    flexDirection: 'row',
-    justifyContent: 'center',
-  },
-  boxShadow: {
-    padding: 5,
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 1,
-    },
-    shadowOpacity: 0.22,
-    shadowRadius: 2.22,
-
-    elevation: 3,
-  },
-  title: {},
-  header: {
-    padding: 20,
-    backgroundColor: '#73C6F5',
-    // height: viewportHeight / 6,
-    // backgroundColor: '#0099FF',
-    // borderBottomLeftRadius: 40,
-    // borderBottomRightRadius: 10
-  },
-});

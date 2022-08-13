@@ -1,20 +1,11 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 
+import { Avatar, Button, Center, HStack, Text, VStack } from 'native-base';
 import {
-  AppRegistry,
-  StyleSheet,
-  TouchableOpacity,
-  Linking,
-  View,
+  StyleSheet, View
 } from 'react-native';
-import {Button, Text, Avatar, Center, HStack, VStack} from 'native-base';
-import {useDispatch, useSelector} from 'react-redux';
-import {setLogout} from '~redux/reducer/authRtk';
-
-// function convertStringProfile(str: string){
-//   const val = str.split(' ').map((name, idx) => idx < 2 &&  name[0]).join('').toUpperCase()
-//   return val
-// }
+import { useDispatch, useSelector } from 'react-redux';
+import { setLogout } from '~redux/reducer/authRtk';
 
 const ProfileScreen = () => {
   const {userInfo} = useSelector((state: any) => state.auth);
